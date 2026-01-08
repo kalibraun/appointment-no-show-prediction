@@ -42,8 +42,3 @@ This project uses publicly available medical appointment scheduling data from a 
 * Appointment scheduling details
 * Engagement indicators (e.g., SMS reminders)
 * Appointment attendance outcomes
-
-
-Limitations
-
-Next Steps
