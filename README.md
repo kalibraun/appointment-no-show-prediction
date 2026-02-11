@@ -44,10 +44,9 @@ This project uses publicly available medical appointment scheduling data from a 
 * Appointment attendance outcomes
 
 # Phase 2: Model Explainability 
-
----
 Why explainability matters? While the inital project focused on predictive performance, this extension emphasizes intrepetability and trust. In healthcare settings, understanding why an appointment is flagged as high risk is critical for operational adoption. 
 
+---
 Threshold Strategy: The classification threshold was set to 0.05 to prioritize recall for no-shows. This ensures nearly all missed appointments are identified, supporting low-cost automated interventions such as reminder messaging or waitlist activation. 
 
 Global Explainability: Top drivers of no-show risk: 
