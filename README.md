@@ -42,3 +42,24 @@ This project uses publicly available medical appointment scheduling data from a 
 * Appointment scheduling details
 * Engagement indicators (e.g., SMS reminders)
 * Appointment attendance outcomes
+
+# Phase 2: Model Explainability 
+
+--
+Why explainability matters? While the inital project focused on predictive performance, this extension emphasizes intrepetability and trust. In healthcare settings, understanding why an appointment is flagged as high risk is critical for operational adoption. 
+
+Threshold Strategy: The classification threshold was set to 0.05 to prioritize recall for no-shows. This ensures nearly all missed appointments are identified, supporting low-cost automated interventions such as reminder messaging or waitlist activation. 
+
+Global Explainability: Top drivers of no-show risk: 
+* Lead time between scheduling and appointment
+* Gender indicators
+* Age
+* SMS reminders
+* Scheduling time of day
+* Selected neighborhood effects
+
+SHAP analysis confirms that longer scheduling delays significantly increase no-show risk. 
+
+Local Explainability: 
+* True Positive Example - This appointment was flagged primarily due to a long lead time between scheduling and appointment date. While a reminder was sent, the delay effect dominated, resulting in a high predicted probability of no-show.
+* False Positive Example - This appointment was flagged due to risk factors associated with missed visits; however, the patient ultimately attended. This illustrates the expected tradeoff when using a recall-optimized threshold.
